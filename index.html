@@ -1,32 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>GitHub repo example</title>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="container">
-      <h1>
-        Hosted with
-        <a href="https://www.netlify.com">Netlify</a>
-      </h1>
-      <a href="mailto:matt@delac.io" class="btn btn-primary contact-btn"
-        >Contact me</a
-      >
-      <img
-        src="https://paper-attachments.dropbox.com/s_E2839E24FC7F0728D4D3F0A165AC8F6358478DD8AAADC3C02AA1B3047CC41EA8_1560193451463_image.png"
-        alt=""
-      />
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather App</title>
+  <link href="src/index.css" rel="stylesheet" type="text/css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="weather-app">
+      <form class="weather-search-form" id="searchedcity">
+        <div class="row">
+          <div class="col-6">
+            <input type="search" placeholder="Type a city" class="form-control" id="city-input" />
+          </div>
+          <div class="col-3">
+            <input type="submit" value="search" class="form-control btn btn-primary" id="search-button" />
+          </div>
+          <div class="col-3">
+            <button type="button" class="btn btn-warning" id="current-button">
+              📍
+            </button>
+          </div>
+        </div>
+      </form>
+      <h1>Sydney NSW, Australia</h1>
+      <ul>
+        <li class="current-time" id="nowtime">Wednesday 22:00</li>
+        <li id="description">Partly Cloudy</li>
+      </ul>
+      <div class="row">
+        <div class="col-6">
+          <div class="clearfix">
+            <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="Cloudy icon"
+              class="weather-icon" />
+
+            <span class="temperature" id="temperature">19</span><span class="units">
+              <a href="#" id="celsius" class="celsius">°C</a>
+            </span>
+          </div>
+        </div>
+        <div class="col-6">
+          <ul>
+            <li>Precipitation: <span id="precipitation">0</span>%</li>
+            <li>Humidity: <span id="humidity">77</span> %</li>
+            <li>Wind: <span id="wind">8</span>km/h</li>
+          </ul>
+        </div>
+      </div>
     </div>
-    <script src="script.js"></script>
-  </body>
+  </div>
+  <script src="script/"></script>
+</body>
+
 </html>
